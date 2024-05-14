@@ -1,0 +1,47 @@
+body {
+    display: flex;
+  font-family: Arial, sans-serif;
+  background-image: url("matekstatikus");
+  background-size: cover;
+  background-repeat: no-repeat;
+  justify-content: center;
+  align-items: center;
+  height: stretch;
+}
+
+.ablak{
+    margin-top: 5vw;
+    align-self:center;
+    width: 50vw;
+}
+#quiz {
+    display: flex;
+    align-content: center;
+    justify-items: center;
+    flex-direction: column;
+    
+    background-color: #72A0C1;
+    border-radius: 100px;
+    box-shadow: 0 0 10px rgba(198, 222, 60, 0.2);
+}
+.ablak #quiz p{
+    text-align:center;
+}
+h1 {
+  text-align: center;
+  color: #333333;
+}
+button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background-color: white;
+  color: #131313;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #8f8d8d;
+}
