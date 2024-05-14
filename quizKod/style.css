@@ -1,0 +1,41 @@
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+.szoveg {
+    margin: 70px;
+}
+.button {
+    font-size: 40px;
+    margin: 30px;
+    cursor: pointer;
+    background-color: darkslategrey;
+}
+.container{
+    display: flex;
+    justify-content: space-around;
+}
+.container button:nth-child(1){
+    margin-left: 40px;
+}
+#correctAnswer {
+    font-weight: bold;
+    color: black;
+    font-size: 20px;
+    display: flex;
+}
+#correctAnswer button{
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 25px;
+}
+#correctAnswer{
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+}
+#correctAnswer p{
+    margin: 0;
+}
+        
