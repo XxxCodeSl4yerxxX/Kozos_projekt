@@ -1,41 +1,135 @@
-
 body {
-    font-family: Arial, sans-serif;
-    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
 }
-.szoveg {
-    margin: 70px;
+
+header {
+    background: #2c3e50;
+    color: white;
+    padding: 1.5rem 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
-.button {
-    font-size: 40px;
-    margin: 30px;
-    cursor: pointer;
-    background-color: darkslategrey;
+
+header .container h1 {
+    margin: 0;
+    font-size: 2.5rem;
 }
-.container{
+
+nav {
+    background: #34495e;
+    padding: 0.5rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
-.container button:nth-child(1){
-    margin-left: 40px;
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+nav ul li a:hover {
+    background: #1abc9c;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+section {
+    background: white;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+section h2 {
+    color: #2c3e50;
+    margin-top: 0;
+}
+
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0,0,0,0.1);
+}
+
+a.menulink:link {
+  text-decoration: none;
+}
+
+a.menulink:visited {
+  text-decoration: none;
+}
+
+a.menulink:hover {
+  text-decoration: none;
+  font-size: 150%;
+  transition: 0.5s;
+}
+
+a.menulink:active {
+  text-decoration: none;
+}
+
+.container-menu {
+    width: 10%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+.container button {
+    width: 15vw;
+    height: 10vw;
+}
+#correctAnswer button {
+    width: 15vw;
+    height: 10vw;
 }
 #correctAnswer {
-    font-weight: bold;
-    color: black;
-    font-size: 20px;
     display: flex;
-}
-#correctAnswer button{
-    display: flex;
-    flex-direction: row-reverse;
-    font-size: 25px;
-}
-#correctAnswer{
-    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    width: 10%;
 }
-#correctAnswer p{
-    margin: 0;
+.foAblak {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
-        
+#szoveg {
+    align-self: center;
+}
+.foAblak h2 {
+    font-size: x-large;
+}
