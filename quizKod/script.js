@@ -7,6 +7,7 @@ const valaszC = document.getElementById('answerC');
 const valaszD = document.getElementById('answerD');
 const szoveg = document.getElementById('szoveg');
 const kerdesMatrix = "!!!kerdeseket ide!!!";
+const javitas = document.getElementById('javitas');
 //ide deklarald a kerdesek char matrixat, 'kerdesSzam' sor jeloli
 //a kerdes sorszamat, az oszlopok pedig a karakterek
 const valaszMatrix = [
@@ -40,6 +41,7 @@ function checkAnswer(answer) {
             foAblak.style.backgroundColor = 'red';
             correctAnswer.style.visibility = 'visible';
             kovKerdesGomb.style.visibility = 'visible';
+            javitas.textContent = 'A helyes valasz: ' + valaszMatrix[helyesValaszok[kerdesSzam]];///kijavitani
         }
         answered = true;
     }

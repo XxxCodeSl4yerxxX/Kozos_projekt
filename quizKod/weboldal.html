@@ -7,22 +7,45 @@
     <script src="script.js" async></script>
 </head>
 <body>
-    <h1>
-        Quiz
-    </h1>
+    <header>
+        <h1>
+            Quiz
+        </h1>
+        <h3>
+            *quiz tema*
+        </h3>
+    </header>
     <div id="foAblak">
         <h2 class="szoveg" id="szoveg">Ide jon a kerdes</h2>
         <div class="container">
-            <button class="button" id="answerA">filler1</button>
-            <button class="button" id="answerB">filler2</button>
-            <button class="button" id="answerC">filler3</button>
-            <button class="button" id="answerD">filler4</button>
+            <ul>
+                <li>
+                    <button class="button" id="answerA">filler1</button>
+                </li>
+                <li>
+                    <button class="button" id="answerB">filler2</button>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <button class="button" id="answerC">filler3</button>
+                </li>
+                <li>
+                    <button class="button" id="answerD">filler4</button>
+                </li>
+            </ul>
+                
         </div>
         <div id="correctAnswer">
-            <p>A helyes válasz: 180</p>
+            <p id="javitas">A helyes válasz: </p>
             <p>Magyarazat: <a href="https://www.chess.com/"> Haromszogek</a></p>
             <button id="kovKerdes"> Következő kérdes</button>
         </div>
     </div>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Síkmértan</p>
+        </div>
+    </footer>
 </body>
 </html>
