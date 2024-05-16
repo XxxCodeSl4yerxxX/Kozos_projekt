@@ -55,6 +55,7 @@ nav ul li a:hover {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem 0;
+	
 }
 
 section {
@@ -81,12 +82,20 @@ footer {
     box-shadow: 0 -4px 8px rgba(0,0,0,0.1);
 }
 
+nav.fejlec {
+  position: sticky;
+  top: 0;
+  background-color: #34495e;
+}
+
 a.menulink:link {
-  text-decoration: none;
+  text-decoration: none; 
+  color: black;
 }
 
 a.menulink:visited {
   text-decoration: none;
+  color: black;
 }
 
 a.menulink:hover {
@@ -99,9 +108,48 @@ a.menulink:active {
   text-decoration: none;
 }
 
+img.szazalek{
+	width: 50%;
+	height:
+}
+
+.container-menu {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+#correctAnswer button {
+    width: 15vw;
+    height: 10vw;
+}
+#correctAnswer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.foAblak {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#szoveg {
+    align-self: center;
+}
+.foAblak h2 {
+    font-size: x-large;
+}
+
 .container-menu {
     width: 10%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem 0;
+}
+.container button {
+    width: 15vw;
+    height: 10vw;
 }
