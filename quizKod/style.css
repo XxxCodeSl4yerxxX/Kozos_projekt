@@ -5,6 +5,7 @@ body {
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
+    font-weight: 800;
 }
 
 header {
@@ -114,6 +115,12 @@ a.menulink:active {
     width: 15vw;
     height: 10vw;
     margin: 1% 1%;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: large;
+}
+button:hover {
+    background: #1abc9c;
 }
 #correctAnswer {
     display: flex;
@@ -141,4 +148,7 @@ a.menulink:active {
 #foAblak .container {
     margin: 0;
     padding: 0;
+}
+ul {
+    padding: 0.2%;
 }

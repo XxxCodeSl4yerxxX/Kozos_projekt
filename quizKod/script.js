@@ -24,6 +24,19 @@ const valaszMatrix = [
 ];
 //ide deklarald a valaszokat
 const helyesValaszok = ['b', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a'];
+//ide a helyes valaszok szovegreszet
+const helyesValaszokSzoveg = [
+    ['valasz 0'],
+    ['valasz 1'],
+    ['valasz 2'],
+    ['valasz 3'],
+    ['valasz 4'],
+    ['valasz 5'],
+    ['valasz 6'],
+    ['valasz 7'],
+    ['valasz 8'],
+    ['valasz 9'],
+]
 let answered = false;
 let kerdesSzam;
 let kerdesMertek =0;
@@ -34,14 +47,14 @@ let frekv = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 function checkAnswer(answer) {
     if (!answered) {
         if (answer === helyesValaszok[kerdesSzam]) {
-            foAblak.style.backgroundColor = 'green';
+            foAblak.style.backgroundColor = '#1f9d89';
             kovKerdesGomb.style.visibility = 'visible';
             pontszam++;
         } else {
-            foAblak.style.backgroundColor = 'red';
+            foAblak.style.backgroundColor = '#c6010f';
             correctAnswer.style.visibility = 'visible';
             kovKerdesGomb.style.visibility = 'visible';
-            javitas.textContent = 'A helyes valasz: ' + valaszMatrix[helyesValaszok[kerdesSzam]];///kijavitani
+            javitas.textContent = 'A helyes valasz: ' + helyesValaszokSzoveg[kerdesSzam];
         }
         answered = true;
     }
