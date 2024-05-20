@@ -8,6 +8,8 @@ const valaszD = document.getElementById('answerD');
 const szoveg = document.getElementById('szoveg');
 const kerdesMatrix = "!!!kerdeseket ide!!!";
 const javitas = document.getElementById('javitas');
+const magyarazatLink = document.getElementById('magyarazatLink');
+
 //ide deklarald a kerdesek char matrixat, 'kerdesSzam' sor jeloli
 //a kerdes sorszamat, az oszlopok pedig a karakterek
 const valaszMatrix = [
@@ -37,6 +39,30 @@ const helyesValaszokSzoveg = [
     ['valasz 8'],
     ['valasz 9'],
 ]
+const helyesValaszTema = [
+    ['tema 0'],
+    ['tema 1'],
+    ['tema 2'],
+    ['tema 3'],
+    ['tema 4'],
+    ['tema 5'],
+    ['tema 6'],
+    ['tema 7'],
+    ['tema 8'],
+    ['tema 9'],
+]
+const helyesValaszLink = [
+    ['link 0'],
+    ['link 1'],
+    ['link 2'],
+    ['link 3'],
+    ['link 4'],
+    ['link 5'],
+    ['link 6'],
+    ['link 7'],
+    ['link 8'],
+    ['link 9'],
+]
 let answered = false;
 let kerdesSzam;
 let kerdesMertek =0;
@@ -55,6 +81,7 @@ function checkAnswer(answer) {
             correctAnswer.style.visibility = 'visible';
             kovKerdesGomb.style.visibility = 'visible';
             javitas.textContent = 'A helyes valasz: ' + helyesValaszokSzoveg[kerdesSzam];
+            magyarazatLink.href = helyesValaszLink[kerdesSzam];          
         }
         answered = true;
     }
