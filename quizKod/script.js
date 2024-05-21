@@ -9,6 +9,7 @@ const szoveg = document.getElementById('szoveg');
 const kerdesMatrix = "!!!kerdeseket ide!!!";
 const javitas = document.getElementById('javitas');
 const magyarazatLink = document.getElementById('magyarazatLink');
+const osszesGomb = document.querySelectorAll('.button');
 
 //ide deklarald a kerdesek char matrixat, 'kerdesSzam' sor jeloli
 //a kerdes sorszamat, az oszlopok pedig a karakterek
@@ -39,6 +40,7 @@ const helyesValaszokSzoveg = [
     ['valasz 8'],
     ['valasz 9'],
 ]
+//ide a helyes valaszok/kerdes temajat
 const helyesValaszTema = [
     ['tema 0'],
     ['tema 1'],
@@ -51,6 +53,7 @@ const helyesValaszTema = [
     ['tema 8'],
     ['tema 9'],
 ]
+//ide a tema dokumentaciojanak linkjet
 const helyesValaszLink = [
     ['link 0'],
     ['link 1'],
@@ -76,12 +79,30 @@ function checkAnswer(answer) {
             foAblak.style.backgroundColor = '#1f9d89';
             kovKerdesGomb.style.visibility = 'visible';
             pontszam++;
+            if (valasz === 'a'){
+                valaszA.style.background = 'grey';
+            } else if (valasz === 'b') {
+                valaszB.style.background = 'grey';
+            } else if (valasz === 'c') {
+                valaszC.style.background = 'grey';
+            } else if (valasz === 'd') {
+                valaszD.style.background = 'grey';
+            }
         } else {
             foAblak.style.backgroundColor = '#c6010f';
             correctAnswer.style.visibility = 'visible';
             kovKerdesGomb.style.visibility = 'visible';
             javitas.textContent = 'A helyes valasz: ' + helyesValaszokSzoveg[kerdesSzam];
-            magyarazatLink.href = helyesValaszLink[kerdesSzam];          
+            magyarazatLink.href = helyesValaszLink[kerdesSzam];
+            if (valasz === 'a'){
+                valaszA.style.background = 'grey';
+            } else if (valasz === 'b') {
+                valaszB.style.background = 'grey';
+            } else if (valasz === 'c') {
+                valaszC.style.background = 'grey';
+            } else if (valasz === 'd') {
+                valaszD.style.background = 'grey';
+            }        
         }
         answered = true;
     }
@@ -117,6 +138,11 @@ function randomSzam() {
 }
 
 function quizKezd() {
+    valaszA.style.background = 'lightgray';
+    valaszB.style.background = 'lightgray';
+    valaszC.style.background = 'lightgray';
+    valaszD.style.background = 'lightgray';
+
     while (frekv[kerdesSzam] != 0 && kerdesMertek != 10) {
         randomSzam();
     }

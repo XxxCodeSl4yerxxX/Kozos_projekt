@@ -112,6 +112,7 @@ a.menulink:active {
     margin: 0 auto;
     padding: 2rem 0;
 }button {
+    background: lightgray;
     width: 15vw;
     height: 10vw;
     margin: 1% 1%;
@@ -119,8 +120,13 @@ a.menulink:active {
     font-weight: 700;
     font-size: large;
 }
-button:hover {
-    background: #1abc9c;
+li:hover {
+    background: lightgrey;
+    transition: 0.8s;
+}
+li {
+    border-radius: 5%;
+    padding: 5px;
 }
 #correctAnswer {
     display: flex;
@@ -136,7 +142,7 @@ button:hover {
     height: fit-content;
 }
 #szoveg {
-    margin-top: 0;
+    margin: 1%;
 }
 .foAblak h2 {
     font-size: x-large;
@@ -151,4 +157,8 @@ button:hover {
 }
 ul {
     padding: 0.2%;
+}
+
+@media (max-width: 1024px) {
+
 }
