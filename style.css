@@ -58,6 +58,20 @@ nav ul li a:hover {
 	
 }
 
+.containerquiz {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.containerquiz ul {
+    list-style: none;
+}
+
+
 section {
     background: white;
     padding: 2rem;
@@ -108,48 +122,52 @@ a.menulink:active {
   text-decoration: none;
 }
 
-img.szazalek{
-	width: 50%;
-	height:
-}
-
 .container-menu {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem 0;
 }
-
-#correctAnswer button {
+button {
     width: 15vw;
     height: 10vw;
+    margin: 1% 1%;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: large;
 }
+button:hover {
+    background: #727272;
+}
+
 #correctAnswer {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+	background-color: yellow;
 }
-.foAblak {
+#foAblak {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    height: fit-content;
 }
 #szoveg {
-    align-self: center;
+    margin-top: 0;
 }
 .foAblak h2 {
     font-size: x-large;
+    margin-top: 0;
 }
-
-.container-menu {
-    width: 10%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem 0;
+#correctAnswer p {
+    margin: 0;
 }
-.container button {
-    width: 15vw;
-    height: 10vw;
+#foAblak .container {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    padding: 0.2%;
 }
