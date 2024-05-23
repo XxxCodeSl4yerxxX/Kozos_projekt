@@ -120,13 +120,15 @@ a.menulink:active {
     font-weight: 700;
     font-size: large;
 }
-li:hover {
+.container .gomb:hover {
     background: lightgrey;
-    transition: 0.8s;
-}
-li {
+    transition: 0.5s;
     border-radius: 5%;
-    padding: 5px;
+}
+.container button {
+    border-radius: 5%;
+    margin: 10px;
+    padding: 10px;
 }
 #correctAnswer {
     display: flex;
@@ -155,8 +157,9 @@ li {
     margin: 0;
     padding: 0;
 }
-ul {
-    padding: 0.2%;
+#gombLista1, #gombLista2 {
+    display: flex;
+    flex-direction: column;
 }
 
 @media (max-width: 1024px) {

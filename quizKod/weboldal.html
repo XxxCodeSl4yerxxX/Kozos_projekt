@@ -2,6 +2,7 @@
 <html lang="hu">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kvíz Játék</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" async></script>
@@ -18,22 +19,23 @@
     <div id="foAblak">
         <h2 class="szoveg" id="szoveg">Ide jon a kerdes</h2>
         <div class="container">
-            <ul>
-                <li>
+            <div id="hibaKi"></div>
+            <div id="gombLista1">
+                <div class="gomb">
                     <button class="button" id="answerA">filler1</button>
-                </li>
-                <li>
+                </div>
+                <div class="gomb">
                     <button class="button" id="answerB">filler2</button>
-                </li>
-            </ul>
-            <ul>
-                <li>
+                </div>
+            </div>
+            <div id="gombLista2">
+                <div class="gomb">
                     <button class="button" id="answerC">filler3</button>
-                </li>
-                <li>
+                </div>
+                <div class="gomb">
                     <button class="button" id="answerD">filler4</button>
-                </li>
-            </ul>
+                </div>
+            </div>
                 
         </div>
         <div id="correctAnswer">

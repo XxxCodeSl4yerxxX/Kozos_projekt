@@ -6,10 +6,12 @@ const valaszB = document.getElementById('answerB');
 const valaszC = document.getElementById('answerC');
 const valaszD = document.getElementById('answerD');
 const szoveg = document.getElementById('szoveg');
-const kerdesMatrix = "!!!kerdeseket ide!!!";
 const javitas = document.getElementById('javitas');
 const magyarazatLink = document.getElementById('magyarazatLink');
 const osszesGomb = document.querySelectorAll('.button');
+const gombLista1 = document.getElementById('gombLista1');
+const gombLista2 = document.getElementById('gombLista2');
+const hibaAblak = document.getElementById('hibaKi');
 
 //ide deklarald a kerdesek char matrixat, 'kerdesSzam' sor jeloli
 //a kerdes sorszamat, az oszlopok pedig a karakterek
@@ -66,16 +68,48 @@ const helyesValaszLink = [
     ['link 8'],
     ['link 9'],
 ]
+const kerdesMatrix = [
+    ['Egy haromszog belso szogeinek osszege?'],
+    ['kerdes1'],
+    ['kerdes2'],
+    ['kerdes3'],
+    ['kerdes4'],
+    ['kerdes5'],
+    ['kerdes6'],
+    ['kerdes7'],
+    ['kerdes8'],
+    ['kerdes9']
+];
+
 let answered = false;
 let kerdesSzam;
 let kerdesMertek =0;
 let valasz;
 let pontszam = 0;
 let frekv = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+let hibaMatrix = [
+    []
+];
+let hibaSzam = 0;
 
-function checkAnswer(answer) {
+function hibaKi() {
+    for (let i = 0; i < hibaSzam; i++){
+        let para = document.createElement("p");
+
+        para.innerText = hibaMatrix[i];
+        para.style.zIndex = 9999; // Set a high z-index value
+        para.style.alignSelf = 'center';
+        hibaAblak.appendChild(para); // Append the element to the body or an appropriate container
+    }
+}
+
+function checkAnswer() {
     if (!answered) {
-        if (answer === helyesValaszok[kerdesSzam]) {
+        valaszA.removeEventListener('click', dontesA);
+        valaszB.removeEventListener('click', dontesB);
+        valaszC.removeEventListener('click', dontesC);
+        valaszD.removeEventListener('click', dontesD);
+        if (valasz === helyesValaszok[kerdesSzam]) {
             foAblak.style.backgroundColor = '#1f9d89';
             kovKerdesGomb.style.visibility = 'visible';
             pontszam++;
@@ -89,6 +123,8 @@ function checkAnswer(answer) {
                 valaszD.style.background = 'grey';
             }
         } else {
+            hibaMatrix[hibaSzam] = kerdesMatrix[kerdesSzam] + ' ' +helyesValaszokSzoveg[kerdesSzam];
+
             foAblak.style.backgroundColor = '#c6010f';
             correctAnswer.style.visibility = 'visible';
             kovKerdesGomb.style.visibility = 'visible';
@@ -102,35 +138,54 @@ function checkAnswer(answer) {
                 valaszC.style.background = 'grey';
             } else if (valasz === 'd') {
                 valaszD.style.background = 'grey';
-            }        
+            }
+            
+            hibaSzam++;
         }
         answered = true;
     }
+    kovKerdesGomb.textContent = 'Következő kérdés';
     kovKerdesGomb.addEventListener('click', quizKezd);
 }
 
 function dontesA() {
-    //console.log('a');
+    console.log('a');
     valasz = 'a';
-    checkAnswer(valasz);
+    kovKerdesGomb.style.visibility = 'visible';
+    valaszA.style.background = 'grey';
+    valaszB.style.background = 'lightgrey';
+    valaszC.style.background = 'lightgrey';
+    valaszD.style.background = 'lightgrey';
 }
 
 function dontesB() {
-    //console.log('b');
+    console.log('b');
     valasz = 'b';
-    checkAnswer(valasz);
+    kovKerdesGomb.style.visibility = 'visible';
+    valaszA.style.background = 'lightgrey';
+    valaszB.style.background = 'grey';
+    valaszC.style.background = 'lightgrey';
+    valaszD.style.background = 'lightgrey';
 }
 
 function dontesC() {
-    //console.log('c');
+    console.log('c');
     valasz = 'c';
-    checkAnswer(valasz);
+    kovKerdesGomb.style.visibility = 'visible';
+    valaszA.style.background = 'lightgrey';
+    valaszB.style.background = 'lightgrey';
+    valaszC.style.background = 'grey';
+    valaszD.style.background = 'lightgrey';
 }
 
 function dontesD() {
-    //console.log('d');
+    console.log('d');
     valasz = 'd';
-    checkAnswer(valasz);
+    kovKerdesGomb.style.visibility = 'visible';
+    valaszA.style.background = 'lightgrey';
+    valaszB.style.background = 'lightgrey';
+    valaszC.style.background = 'lightgrey';
+    valaszD.style.background = 'grey';
 }
 
 function randomSzam() {
@@ -153,22 +208,30 @@ function quizKezd() {
         valaszB.removeEventListener('click', dontesB);
         valaszC.removeEventListener('click', dontesC);
         valaszD.removeEventListener('click', dontesD);
+
+        kovKerdesGomb.removeEventListener('click', checkAnswer);
+        kovKerdesGomb.removeEventListener('click', quizKezd);
         
         valaszA.addEventListener('click', dontesA);
         valaszB.addEventListener('click', dontesB);
         valaszC.addEventListener('click', dontesC);
         valaszD.addEventListener('click', dontesD);
+
+        kovKerdesGomb.textContent = 'Válasz jóváhagyása';
+        kovKerdesGomb.addEventListener('click', checkAnswer);
     
         szoveg.style.visibility = 'visible';
         valaszA.style.visibility = 'visible';
         valaszB.style.visibility = 'visible';
         valaszC.style.visibility = 'visible';
         valaszD.style.visibility = 'visible';
+        gombLista1.style.visibility = 'visible';
+        gombLista2.style.visibility = 'visible';
         foAblak.style.backgroundColor = 'white';
         correctAnswer.style.visibility = 'visible';
         kovKerdesGomb.style.visibility = 'visible';
 
-        szoveg.textContent = kerdesMatrix;
+        szoveg.textContent = kerdesMatrix[kerdesSzam];
         valaszA.textContent = valaszMatrix[kerdesSzam][0];
         valaszB.textContent = valaszMatrix[kerdesSzam][1];
         valaszC.textContent = valaszMatrix[kerdesSzam][2];
@@ -196,6 +259,8 @@ function quizVege() {
     valaszB.style.visibility = 'hidden';
     valaszC.style.visibility = 'hidden';
     valaszD.style.visibility = 'hidden';
+    gombLista1.style.visibility = 'hidden';
+    gombLista2.style.visibility = 'hidden';
 
     foAblak.style.backgroundColor = 'white';
     correctAnswer.style.visibility = 'hidden';
@@ -213,6 +278,8 @@ function quizVege() {
     }
     kerdesMertek = 0;
     pontszam = 0;
+
+    hibaKi();
 
     kovKerdesGomb.addEventListener('click', quizKezd);
 }
