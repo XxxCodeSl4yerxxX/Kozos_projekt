@@ -1,0 +1,68 @@
+const valaszMatrix = [
+    ['180', '360', '0', '90'],
+    ['Önmagát metszi', 'Önmagát nem metszi', 'Konvex', 'Konkáv'],
+    ['Négyzet', 'Rombusz', 'Trapéz', 'Paralelogramma'],
+    ['60', '90', '120', '150'],
+    ['Párhuzamosak', 'Kongruensek', 'Párhuzamosak és kongruensek', 'Egyik sem'],
+     ['Párhuzamosak', 'Kongruensek', 'Merőlegesek egymásra', 'Mindhárom'],
+    ['Összes oldala kongruens', 'Átlói merőlegesek egymásra', 'Szögei derékszögek', 'Szembenfekvő oldalai párhuzamosak'],
+    ['Rombusz', 'Trapéz', 'Négyzet', 'Téglalap'],
+    ['1', '2', '3', '4'],
+    ['90', '180', '270', '360'],
+    ];
+//ide deklarald a valaszokat
+const helyesValaszok = ['b', 'a', 'c', 'b', 'c', 'd', 'c', 'c', 'b', 'b'];
+//ide a helyes valaszok szovegreszet
+const helyesValaszokSzoveg = [
+    ['360'],
+    ['Önmagát nem metszi'],
+    ['Trapéz'],
+    ['90'],
+    ['Igaz'],
+    ['Párhuzamosak és kongruensek'],
+    ['Mindhárom'],
+    ['Szögei derékszögek'],
+    ['Négyzet'],
+    ['2'],
+    ['180'],
+
+]
+//ide a helyes valaszok/kerdes temajat
+const helyesValaszTema = [
+    ['tema 0'],
+    ['tema 1'],
+    ['tema 2'],
+    ['tema 3'],
+    ['tema 4'],
+    ['tema 5'],
+    ['tema 6'],
+    ['tema 7'],
+    ['tema 8'],
+    ['tema 9'],
+]
+//ide a tema dokumentaciojanak linkjet
+const helyesValaszLink = [
+    ['./negyszog.html'],
+    ['./negyszog.html'],
+    ['./negyszog.html'],
+    ['./negyszog.html'],
+    ['./negyszog.html'],
+    ['./negyszog.html'],
+    ['./negyszog.html'],
+    ['./negyszog.html'],
+    ['./negyszog.html'],
+    ['./negyszog.html'],
+]
+const kerdesMatrix = [
+     ['Mekkora a négyszögek belső szögeinek összege fokban kifejezve?'],
+    ['Mit nevezünk elfajult négyszögnek?'],
+    ['Minek nevezzük azt a négyszöget amelynek két szembenfekvő oldala párhuzmos?'],
+    ['A téglalapnak mekkorák a belső szögei?'],
+    ['Milyenek a paralelogramma szembenfekvő oldalai?'],
+    ['Milyenek a négyzet oldalai?'],
+    ['Melyik NEM igaz az alábbiak közül a rombuszra?'],
+    ['Melyik nem egy sajátos paralelogramma?'],
+    ['Hány átlója van egy négyszögnek?'],
+    ['A négyszög azonos oldalon fekvő szögeinek összege…'],
+  ];
+

@@ -1,0 +1,70 @@
+const valaszMatrix = [
+    ['180', '360', '0', '90'],
+    ['c<a+b', 'a+b<c', 'a=b=c', 'a+c<b'],
+    ['Két szöge egyenlő', 'Oldalaik aránya egyenlő', 'Szögeik egyenlőek és  megfelelő oldalak aránya egyenlő', 'Két oldalpár aránya egyenlő'],
+    ['A legkissebb', 'A legnagyobb', 'A középső', 'Nem lehet megmondani'],
+    ['Igaz', 'Hamis', 'Nem tudom', 'Nem lehet megmondani'],
+    ['60', 'Változó', '30, 60, 90', '40, 40, 100'],
+    ['Hegyes', 'Tompa', 'Nyúlt', 'Derék'],
+    ['Igaz, 'Hamsi', 'Általában igaz', 'Nem tudom'],
+    ['Szögfelező', 'Magasság', 'Gellért-vonal', 'Oldalfelező'],
+    ['Szögek aránya', 'Oldalak aránya', 'Háromszögek hasonlósága', 'Mindhárom'],
+];
+    ['6', '9', '12', '15'],
+
+//ide deklarald a valaszokat
+const helyesValaszok  ['a', 'a', 'd', 'b', 'a', 'd', 'a', 'c', 'b', 'b'];
+//ide a helyes valaszok szovegreszet
+const helyesValaszokSzoveg = [
+    ['180'],
+    ['c<a+b'],
+    ['Két oldalpár aránya egyenlő'],
+    ['A legnagyobb'],
+    ['60'],
+    ['Derék'],
+    ['Igaz'],
+    ['Gellért-vonal'],
+    ['Oldalak aránya'],
+    ['9'],
+]
+//ide a helyes valaszok/kerdes temajat
+const helyesValaszTema = [
+    ['tema 0'],
+    ['tema 1'],
+    ['tema 2'],
+    ['tema 3'],
+    ['tema 4'],
+    ['tema 5'],
+    ['tema 6'],
+    ['tema 7'],
+    ['tema 8'],
+    ['tema 9'],
+]
+//ide a tema dokumentaciojanak linkjet
+const helyesValaszLink = [
+    ['./haromszogek.html'],
+    ['./haromszogek.html'],
+    ['./haromszogek.html'],
+    ['./haromszogek.html'],
+    ['./haromszogek.html'],
+    ['./haromszogek.html'],
+    ['./haromszogek.html'],
+    ['./haromszogek.html'],
+    ['./haromszogek.html'],
+    ['./haromszogek.html'],
+]
+const kerdesMatrix = [
+    ['Mekkora a háromszög belső szögeinek összege fokban kifejezve?'],
+    ['Mikor lehetne az a<=b<=c számok egy háromszög oldalai?'],
+    ['Mekkora egy derékszög mértéke fokben kifejezve?'],
+    ['Mikor NEM hasonló két háromszög?'],
+    ['A háromszög melyik szögével van szemben a leghosszabb oldal?'],
+    ['Mekkorák az egyenlő oldalú háromszög szögei?'],
+    ['Milyen szöget tartalmaz a derékszögű  háromszög?'],
+    ['Az egyenlő szárú háromszög alapon fekvő szögei egyenelőek?'],
+    ['Melyik nevezetes vonal nem létezik?'],
+    ['Mikre vonatkozik a szögfelező tétel?'],
+    ['Hány nevezetes pont van a Feuerbach-körön?'],
+];
+
+

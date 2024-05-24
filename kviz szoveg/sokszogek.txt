@@ -1,0 +1,49 @@
+const valaszMatrix = [
+    ['n*180', 'n-1)*180 ', '(n+1)*180 ', '(n-2)*180 '],
+    ['n', 'n(n-3)', 'n(n-3)/2', 'n-3'],
+    ['Van benne két derékszög', 'Csak hegyesszögek vannak benne', 'Van benne 2 tompaszög', 'Van benne nyúltszögnél nagyobb szög'],
+    ['legnagyobb szöge tompaszög', 'Két derékszög van benne', 'Nincs benne tompaszög', 'Nincs benne derékszög'],
+    ['90', '60', '180', '150'],
+     ['Párhuzamosak', 'Kongruensek', 'Merőlegesek egymásra', 'Mindhárom'],
+        ];
+//ide deklarald a valaszokat
+const helyesValaszok = ['d', 'c', 'd', 'a', 'c'];
+//ide a helyes valaszok szovegreszet
+const helyesValaszokSzoveg = [
+    ['(n-2)*180 '],
+    ['n(n-3)/2'],
+    ['Van benne nyúltszögnél nagyobb szög'],
+    ['legnagyobb szöge tompaszög'],
+    ['180'],
+]
+//ide a helyes valaszok/kerdes temajat
+const helyesValaszTema = [
+    ['tema 0'],
+    ['tema 1'],
+    ['tema 2'],
+    ['tema 3'],
+    ['tema 4'],
+    ['tema 5'],
+    ['tema 6'],
+    ['tema 7'],
+    ['tema 8'],
+    ['tema 9'],
+]
+//ide a tema dokumentaciojanak linkjet
+const helyesValaszLink = [
+    ['./sokszogek.html'],
+    ['./sokszogek.html'],
+    ['./sokszogek.html'],
+    ['./sokszogek.html'],
+    ['./sokszogek.html'],
+  ]
+const kerdesMatrix = [
+     ['Mekkora az n oldalú sokszög belső szögeinek összege fokban kifejezve?'],
+    ['Hány átlója van egy n oldalú konvex sokszögnek?'],
+    ['Mit nevezünk konkáv sökszögnek?'],
+    ['Mit nevezünk konvex sokszögnek?'],
+    ['Mekkora azú szabályos ötszög szögeinek mértéke?'],
+     ];
+ 
+
+!!!!!! 5 kerdes !!!!!!
