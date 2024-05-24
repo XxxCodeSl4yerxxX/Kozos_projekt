@@ -81,6 +81,8 @@ const kerdesMatrix = [
     ['kerdes9']
 ];
 
+const maxKerdes = 10;
+
 let answered = false;
 let kerdesSzam;
 let kerdesMertek =0;
@@ -200,7 +202,7 @@ function quizKezd() {
 
     hibaAblak.innerHTML = '';
 
-    while (frekv[kerdesSzam] != 0 && kerdesMertek != 10) {
+    while (frekv[kerdesSzam] != 0 && kerdesMertek != maxKerdes) {
         randomSzam();
     }
     console.log(kerdesSzam + ' ' + kerdesMertek);
