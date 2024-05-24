@@ -1,0 +1,66 @@
+const valaszMatrix = [
+    ['A nagyobbat', 'A kisebbet', 'Bármelyiket', 'Mindkettőt'],
+    ['Végtelen', '1 egység', '0', 'Helyzettől függ'],
+    ['30', '60', '90', '180'],
+    ['0-90', '90', '90-180', '180'],
+    ['Igaz', 'Hamis', 'Nem tudom', 'Nem lehet megmondani'],
+    ['3 pont határozza meg', 'Adott hosszúságú', 'Végtelen hosszú', '1 pont határozza meg'],
+    ['1 pont', '2  összefutó egyenes', '2 összefutó szakasz', '2 összefutó félegyenes'],
+    ['Hegyes', 'Nyúlt', 'Tompa', 'Derék'],
+    ['68', '248', '22', '112'],
+    ['Hegyesszög', 'Tompaszög', 'Derékszög', 'Nullszög'],
+];
+//ide deklarald a valaszokat
+const helyesValaszok = ['b', 'c', 'c', 'a', 'a', 'b', 'a', 'b', 'b', 'c'];
+//ide a helyes valaszok szovegreszet
+const helyesValaszokSzoveg = [
+    ['A kisebbet'],
+    ['0'],
+    ['90'],
+    ['0-90'],
+    ['Igaz'],
+    ['Adott hosszúságú'],
+    ['1 pont'],
+    ['Nyúlt'],
+    ['248'],
+    ['Derékszög'],
+]
+//ide a helyes valaszok/kerdes temajat
+const helyesValaszTema = [
+    ['tema 0'],
+    ['tema 1'],
+    ['tema 2'],
+    ['tema 3'],
+    ['tema 4'],
+    ['tema 5'],
+    ['tema 6'],
+    ['tema 7'],
+    ['tema 8'],
+    ['tema 9'],
+]
+//ide a tema dokumentaciojanak linkjet
+const helyesValaszLink = [
+    ['./alapok.html'],
+    ['./alapok.html'],
+    ['./alapok.html'],
+    ['./alapok.html'],
+    ['./alapok.html'],
+    ['./alapok.html'],
+    ['./alapok.html'],
+    ['./alapok.html'],
+    ['./alapok.html'],
+    ['./alapok.html'],
+]
+const kerdesMatrix = [
+    ['Két szakasz közrezárt szögeiből mindig melyiket vesszük figyelembe?'],
+    ['Mekkora a pont kiterjedése?'],
+    ['Mekkora egy derékszög mértéke fokben kifejezve?'],
+    ['Mekkora egy hegyesszög mértéke fokban kifejezve?'],
+    ['Három pont mindig ugyanabban a síkban helyezkedik el?'],
+    ['Melyik kijelentés igaz a szkaszra?'],
+    ['Mi NEM határoz meg egy szöget?'],
+    ['Milyen szög a 180 fok?'],
+    ['Ha a két egyenes által közrezárt kisebbik szög mértéke 112 fok mekkora a nagyobbiké?'],
+    ['Ha két szakasz merőleges egymásra az általuk közrezárt szög…']
+];
+
