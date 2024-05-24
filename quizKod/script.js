@@ -196,7 +196,9 @@ function quizKezd() {
     valaszA.style.background = 'lightgray';
     valaszB.style.background = 'lightgray';
     valaszC.style.background = 'lightgray';
-    valaszD.style.background = 'lightgray';
+    valaszD.style.background = 'lightgray'; 
+
+    hibaAblak.innerHTML = '';
 
     while (frekv[kerdesSzam] != 0 && kerdesMertek != 10) {
         randomSzam();
@@ -254,6 +256,7 @@ function kovKerdes(kerdesSzam) {
     foAblak.style.backgroundColor = 'white';
 }
 
+
 function quizVege() {
     valaszA.style.visibility = 'hidden';
     valaszB.style.visibility = 'hidden';
@@ -281,7 +284,7 @@ function quizVege() {
 
     hibaKi();
 
-    kovKerdesGomb.addEventListener('click', quizKezd);
+    kovKerdesGomb.addEventListener('click', quizKeszit);
 }
 
 quizKezd();
